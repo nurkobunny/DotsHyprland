@@ -1,0 +1,406 @@
+/* =============================================================================
+ * Nord Theme for Waybar
+ * Based on: https://www.nordtheme.com
+ * ============================================================================= */
+
+/* Nord Color Palette */
+@define-color polar_night_1 #2e3440;
+@define-color polar_night_2 #2e3440;
+@define-color polar_night_3 #2e3440;
+@define-color polar_night_4 #2e3440;
+@define-color snow_storm_1 #D8DEE9;
+@define-color snow_storm_2 #E5E9F0;
+@define-color snow_storm_3 #ECEFF4;
+@define-color frost_1 #8FBCBB;
+@define-color frost_2 #88C0D0;
+@define-color frost_3 #81A1C1;
+@define-color frost_4 #5E81AC;
+@define-color aurora_red #BF616A;
+@define-color aurora_orange #D08770;
+@define-color aurora_yellow #EBCB8B;
+@define-color aurora_green #A3BE8C;
+@define-color aurora_purple #B48EAD;
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Fira Code", monospace;
+    font-weight: bold;
+    min-height: 0;
+    font-size: 97%;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+window#waybar {
+    background-color: @polar_night_1;
+    border-radius: 5px;
+    border: 1px solid @polar_night_3;
+}
+
+tooltip {
+    background: @polar_night_1;
+    opacity: 1;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: @polar_night_3;
+}
+
+tooltip label {
+    color: @snow_storm_1;
+}
+
+#taskbar button,
+#workspaces button {
+    color: @frost_4;
+    background-color: transparent;
+    padding: 4px 6px 4px 4px;
+    border: none;
+}
+
+
+#custom-music{
+    margin-left: 25px;
+}
+
+#taskbar button.active,
+#workspaces button.active {
+    color: @aurora_orange;
+    background-color: @polar_night_3;
+    border: none;
+}
+
+#taskbar button.focused,
+#workspaces button.focused {
+    color: @snow_storm_3;
+    background: @polar_night_3;
+    border-radius: 5px;
+    border: none;
+}
+
+#workspaces button.urgent {
+    color: @polar_night_1;
+    background: @aurora_red;
+    border-radius: 5px;
+    border: none;
+}
+
+#taskbar button:hover,
+#workspaces button:hover {
+    background: @polar_night_3;
+    color: @snow_storm_3;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Убираем ВСЕ рамки у модулей */
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#mpris,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
+#pulseaudio-slider,
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-backlight,
+#custom-browser,
+#custom-cava_mviz,
+#custom-cycle_wall,
+#custom-dot_update,
+#custom-file_manager,
+#custom-keybinds,
+#custom-keyboard,
+#custom-light_dark,
+#custom-lock,
+#custom-hint,
+#custom-hypridle,
+#custom-menu,
+#custom-playerctl,
+#custom-power_vertical,
+#custom-power,
+#custom-quit,
+#custom-reboot,
+#custom-settings,
+#custom-spotify,
+#custom-swaync,
+#custom-tty,
+#custom-updater,
+#custom-hyprpicker,
+#custom-weather,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.default, 
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.severe,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.sunnyDay,
+#hyprland-window {
+    opacity: 1;
+    padding: 4px 6px;
+    color: @snow_storm_1;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+#idle_inhibitor {
+    color: @frost_1;
+}
+
+#hyprland-window {
+    color: @frost_3;
+}
+
+#mpris {
+    color: @snow_storm_3;
+}
+
+#battery {
+    color: @aurora_green;
+    padding-left: 15px;
+}
+
+@keyframes blink {
+    to {
+        background-color: @aurora_red;
+        color: @snow_storm_3;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: @aurora_red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Убираем рамки у кнопок питания и меню */
+#custom-lock,
+#custom-power,
+#custom-menu {
+    color: @aurora_red;
+    border: none;
+    border-radius: 0;
+    font-weight: bolder;
+    padding: 4px 8px;
+    background-color: transparent;
+    margin: 0;
+}
+
+#custom-menu {
+    color: @frost_3;
+}
+
+#network {
+    color: @frost_4;
+}
+
+#network.disconnected {
+    color: @polar_night_4;
+}
+
+#backlight {
+    color: @aurora_yellow;
+}
+
+#custom-weather {
+    color: @aurora_green;
+}
+
+#pulseaudio {
+    color: @frost_2;
+}
+
+#pulseaudio.muted {
+    color: @polar_night_4;
+}
+
+#clock,
+#clock-calender {
+    color: @frost_1;
+    font-weight: bold;
+}
+
+#cpu {
+    color: @aurora_yellow;
+}
+
+#cpu.high {
+    color: @aurora_orange;
+}
+
+#cpu.critical {
+    color: @aurora_red;
+}
+
+#memory {
+    color: @frost_2;
+}
+
+#memory.high {
+    color: @aurora_orange;
+}
+
+#memory.critical {
+    color: @aurora_red;
+}
+
+#temperature {
+    color: @aurora_orange;
+}
+
+#temperature.critical {
+    color: @aurora_red;
+}
+
+#disk {
+    color: @aurora_green;
+}
+
+/* Слайдеры */
+#backlight-slider trough,
+#pulseaudio-slider trough {
+    min-height: 100px;
+    min-width: 7px;
+    border-radius: 5px;
+    background-color: @polar_night_3;
+    border: none;
+}
+
+#backlight-slider highlight,
+#pulseaudio-slider highlight {
+    min-width: 5px;
+    border-radius: 5px;
+}
+
+#pulseaudio-slider highlight {
+    background-color: @frost_2;
+}
+
+#backlight-slider highlight {
+    background-color: @aurora_yellow;
+}
+
+#backlight-slider slider,
+#pulseaudio-slider slider {
+    min-height: 7px;
+    min-width: 15px;
+    opacity: 0;
+    background-color: @snow_storm_1;
+    border-radius: 3px;
+    box-shadow: 1px 2px 3px 1px @polar_night_1;
+}
+
+/* Системный лоток без рамки */
+#tray {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 4px 8px;
+    margin: 0;
+}
+
+#window {
+    color: @snow_storm_1;
+    font-weight: bold;
+}
+
+#mode {
+    background-color: @aurora_red;
+    color: @snow_storm_3;
+    border-radius: 0;
+    padding: 4px 8px;
+    margin: 0;
+    border: none;
+}
+
+#bluetooth {
+    color: @frost_2;
+}
+
+#bluetooth.disconnected {
+    color: @polar_night_4;
+}
+
+#power-profiles-daemon {
+    color: @aurora_green;
+}
+
+#keyboard-state {
+    color: @snow_storm_1;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 4px 8px;
+    margin: 0;
+    border: none;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state label.locked {
+    background-color: @aurora_green;
+    color: @polar_night_1;
+    border-radius: 3px;
+}
+
+#wireplumber {
+    color: @frost_2;
+}
+
+#wireplumber.muted {
+    color: @polar_night_4;
+}
+
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: transparent;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+
+#custom-vpn {
+    color: @frost_2;
+}
+#custom-vpn.ON {
+    color: @aurora_green;
+}
+#custom-vpn.OFF {
+    color: @aurora_red;
+}
+
+#custom-gemini {
+    color: @aurora_purple;
+    background-color: transparent;
+    font-size: 25px;
+    padding: 0 5px;
+}
+
+#custom-gemini:hover {
+    color: @frost_2;
+    background-color: @polar_night_3;
+    border-radius: 5px;
+}

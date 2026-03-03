@@ -1,0 +1,234 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ---- ❄️ Catppuccin Latte ❄️ ---- */
+
+:root {
+  --rm-bg0: #eff1f5;      /* Base */
+  --rm-bg0-hard: #e6e9ef; /* Mantle */
+  --rm-bg0-soft: #ccd0da; /* Surface 1 */
+  --rm-bg1: #ccd0da;      /* Surface 1 */
+  --rm-bg2: #bcc0cc;      /* Surface 0 */
+  --rm-bg3: #acb0be;      /* Overlay 2 */
+  --rm-bg4: #9ca0b0;      /* Overlay 1 */
+  
+  --rm-fg0: #4c4f69;      /* Text */
+  --rm-fg1: #4c4f69;      /* Text */
+  --rm-fg2: #5c5f77;      /* Subtext 1 */
+  --rm-fg3: #6c6f85;      /* Subtext 0 */
+  --rm-fg4: #7c7f93;      /* Overlay 2 */
+  
+  --rm-red: #d20f39;      /* Red */
+  --rm-green: #40a02b;    /* Green */
+  --rm-yellow: #df8e1d;   /* Yellow */
+  --rm-blue: #1e66f5;     /* Blue */
+  --rm-purple: #8839ef;   /* Mauve */
+  --rm-rose: #ea76cb;     /* Pink */
+  --rm-gold: #fe640b;     /* Peach */
+  --rm-grey: #9ca0b0;     /* Overlay 1 */
+  
+  --rm-bg-statusline1: var(--rm-bg0);
+  --rm-bg-statusline2: var(--rm-bg1);
+  --rm-bg-statusline3: var(--rm-bg2);
+
+  --toolbarbutton-icon-fill: #4c4f69 !important;
+  --toolbarbutton-icon-fill-attention: #ea76cb !important;
+  --panel-description-color: #4c4f69 !important;
+  --lwt-toolbarbutton-icon-fill: #4c4f69 !important;
+}
+
+* {
+  font-family: "JetBrains Mono", monospace !important;
+}
+
+#main-window {
+  background-color: #eff1f5 !important;
+  color: #4c4f69 !important;
+}
+
+.toolbarbutton-1, 
+.toolbarbutton-icon,
+.navigation-stack,
+#nav-bar .toolbarbutton-1,
+#nav-bar image,
+#nav-bar stack,
+.urlbar-icon,
+#identity-box,
+#PanelUI-menu-button,
+#unified-extensions-button,
+.bookmark-item,
+.toolbarbutton-text {
+  fill: #4c4f69 !important;
+  color: #4c4f69 !important;
+}
+
+#star-button, #reader-mode-button, #identity-icon, .sharing-icon {
+  fill: #4c4f69 !important;
+}
+
+@-moz-document url("about:home"), url("about:newtab") {
+  body {
+    background-color: #eff1f5 !important;
+    color: #4c4f69 !important;
+  }
+  .search-wrapper, .top-sites, .section {
+    background-color: #eff1f5 !important;
+    color: #4c4f69 !important;
+  }
+  a {
+    color: #1e66f5 !important;
+  }
+}
+
+#nav-bar {
+  background-color: #eff1f5 !important;
+  color: #4c4f69 !important;
+}
+
+#urlbar-input, 
+#urlbar-scheme,
+.urlbar-input-box,
+#urlbar-input-container,
+#urlbar {
+  background-color: #ccd0da !important;
+  color: #4c4f69 !important;
+}
+
+.urlbar-input-box > input {
+  color: #4c4f69 !important;
+}
+
+.urlbarView-row,
+.urlbarView-row * {
+  color: #4c4f69 !important;
+  fill: #4c4f69 !important;
+}
+
+.urlbarView-row:hover {
+  background-color: #ccd0da !important;
+}
+
+.urlbarView-title,
+.urlbarView-secondary,
+.urlbarView-url {
+  color: #4c4f69 !important;
+}
+
+.tab-background {
+  background-color: #eff1f5 !important;
+  margin: 2px !important;
+}
+
+.tab-background[selected="true"] {
+  background-color: #ccd0da !important;
+}
+
+.tab-label {
+  color: #4c4f69 !important;
+}
+
+.tab-secondary-label {
+  color: var(--rm-fg4) !important;
+}
+
+.tab-icon-image {
+  filter: contrast(1.1) !important;
+}
+
+#TabsToolbar {
+  background-color: #eff1f5 !important;
+}
+
+#PersonalToolbar {
+  background-color: #eff1f5 !important;
+  color: #4c4f69 !important;
+}
+
+#PersonalToolbar .bookmark-item .toolbarbutton-text {
+  color: #4c4f69 !important;
+}
+
+#sidebar-box {
+  background-color: #eff1f5 !important;
+  color: #4c4f69 !important;
+}
+
+.sidebar-placesTree {
+  background-color: #eff1f5 !important;
+  color: #4c4f69 !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row {
+  background-color: #eff1f5 !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell-text {
+  color: #4c4f69 !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row(selected) {
+  background-color: #ccd0da !important;
+}
+
+#toolbar-menubar {
+  background-color: #eff1f5 !important;
+  color: #4c4f69 !important;
+}
+
+menupopup {
+  background-color: #eff1f5 !important;
+  color: #4c4f69 !important;
+}
+
+menuitem:hover {
+  background-color: #ccd0da !important;
+}
+
+button {
+  background-color: #ccd0da !important;
+  color: #4c4f69 !important;
+}
+
+toolbar {
+  background-color: #eff1f5 !important;
+}
+
+.searchbar-textbox {
+  background-color: #ccd0da !important;
+  color: #4c4f69 !important;
+}
+
+scrollbar {
+  background-color: #eff1f5 !important;
+}
+
+scrollbarthumb {
+  background-color: #bcc0cc !important;
+}
+
+#statuspanel {
+  background-color: #eff1f5 !important;
+  color: #4c4f69 !important;
+}
+
+findbar {
+  background-color: #eff1f5 !important;
+}
+
+input {
+  background-color: #ccd0da !important;
+  color: #4c4f69 !important;
+}
+
+.panel-arrowcontent {
+  background-color: #eff1f5 !important;
+  color: #4c4f69 !important;
+}
+
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--rm-bg2) #eff1f5 !important;
+}
+
+#navigator-toolbox {
+  border-bottom: none !important;
+}

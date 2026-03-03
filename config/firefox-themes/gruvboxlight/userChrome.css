@@ -1,0 +1,252 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+:root {
+  --gb-bg0: #f2e5bc;
+  --gb-bg0-hard: #f9f5d7;
+  --gb-bg0-soft: #f2e5bc;
+  --gb-bg1: #ebdbb2;
+  --gb-bg2: #d5c4a1;
+  --gb-bg3: #bdae93;
+  --gb-bg4: #a89984;
+  
+  --gb-fg0: #654735;
+  --gb-fg1: #3c3836;
+  --gb-fg2: #504945;
+  --gb-fg3: #665c54;
+  --gb-fg4: #7c6f64;
+  
+  --gb-red: #c14720;
+  --gb-green: #6c782e;
+  --gb-yellow: #b47109;
+  --gb-blue: #45707a;
+  --gb-purple: #945e80;
+  --gb-aqua: #4c7a5d;
+  --gb-orange: #c35e0a;
+  --gb-grey: #928374;
+  
+  --gb-bg-statusline1: var(--gb-bg0);
+  --gb-bg-statusline2: var(--gb-bg1);
+  --gb-bg-statusline3: var(--gb-bg2);
+
+  --toolbarbutton-icon-fill: #3c3836 !important;
+  --lwt-toolbarbutton-icon-fill: #3c3836 !important;
+  --panel-description-color: #3c3836 !important;
+  --toolbar-field-color: #3c3836 !important;
+}
+
+* {
+  font-family: "JetBrains Mono", monospace !important;
+}
+
+#main-window {
+  background-color: #f2e5bc !important;
+  color: var(--gb-fg1) !important;
+}
+
+.toolbarbutton-1, 
+.toolbarbutton-icon,
+.navigation-stack,
+#nav-bar .toolbarbutton-1,
+#nav-bar image,
+#nav-bar stack,
+.urlbar-icon,
+#identity-box,
+#PanelUI-menu-button,
+#unified-extensions-button,
+#alltabs-button,
+#new-tab-button,
+.tab-close-button {
+  fill: #3c3836 !important;
+  color: #3c3836 !important;
+}
+
+#star-button, #reader-mode-button, #identity-icon, .sharing-icon, .tracking-protection-icon {
+  fill: #3c3836 !important;
+}
+
+@-moz-document url("about:home"), url("about:newtab") {
+  body {
+    background-color: #f2e5bc !important;
+    color: #3c3836 !important;
+  }
+
+  .search-wrapper, .top-sites, .section {
+    background-color: #f2e5bc !important;
+    color: #3c3836 !important;
+  }
+
+  a {
+    color: #45707a !important;
+  }
+}
+
+#nav-bar {
+  background-color: #f2e5bc !important;
+  color: #3c3836 !important;
+}
+
+#urlbar-input, 
+#urlbar-scheme,
+.urlbar-input-box,
+#urlbar-input-container,
+#urlbar {
+  background-color: #ebdbb2 !important;
+  color: #3c3836 !important;
+  --autocomplete-popup-highlight-background: var(--gb-bg2) !important;
+}
+
+.urlbar-input-box > input {
+  color: #3c3836 !important;
+}
+
+#urlbar:hover {
+  background-color: #ebdbb2 !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+  background-color: #f2e5bc !important;
+}
+
+.urlbarView {
+  background-color: #f2e5bc !important;
+}
+
+.urlbarView-row {
+  color: #3c3836 !important;
+}
+
+.urlbarView-row:hover {
+  background-color: #ebdbb2 !important;
+}
+
+.tab-background {
+  background-color: #f2e5bc !important;
+  margin: 2px !important;
+}
+
+.tab-background[selected="true"] {
+  background-color: #ebdbb2 !important;
+}
+
+.tab-label {
+  color: #3c3836 !important;
+}
+
+.tab-secondary-label {
+  color: var(--gb-fg4) !important;
+}
+
+.tab-icon-image {
+  filter: contrast(1.1) brightness(0.8) !important;
+}
+
+#TabsToolbar {
+  background-color: #f2e5bc !important;
+}
+
+#PersonalToolbar {
+  background-color: #f2e5bc !important;
+}
+
+#sidebar-box {
+  background-color: #f2e5bc !important;
+  color: var(--gb-fg1) !important;
+}
+
+.sidebar-placesTree {
+  background-color: #f2e5bc !important;
+  color: var(--gb-fg1) !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row {
+  background-color: #f2e5bc !important;
+  color: var(--gb-fg1) !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row(selected) {
+  background-color: #ebdbb2 !important;
+  color: var(--gb-fg0) !important;
+}
+
+#toolbar-menubar {
+  background-color: #f2e5bc !important;
+  color: var(--gb-fg1) !important;
+}
+
+menupopup {
+  background-color: #f2e5bc !important;
+  color: var(--gb-fg1) !important;
+}
+
+menuitem:hover {
+  background-color: #ebdbb2 !important;
+  color: var(--gb-fg0) !important;
+}
+
+button {
+  background-color: #ebdbb2 !important;
+  color: var(--gb-fg1) !important;
+}
+
+button:hover {
+  background-color: var(--gb-bg2) !important;
+  color: var(--gb-fg0) !important;
+}
+
+toolbar {
+  background-color: #f2e5bc !important;
+}
+
+.searchbar-textbox {
+  background-color: #ebdbb2 !important;
+  color: #3c3836 !important;
+}
+
+scrollbar {
+  background-color: #f2e5bc !important;
+}
+
+scrollbarthumb {
+  background-color: #d5c4a1 !important;
+}
+
+scrollbarthumb:hover {
+  background-color: #bdae93 !important;
+}
+
+#statuspanel {
+  background-color: #f2e5bc !important;
+  color: var(--gb-fg1) !important;
+}
+
+findbar {
+  background-color: #f2e5bc !important;
+}
+
+#downloadsPanel {
+  background-color: #f2e5bc !important;
+}
+
+input {
+  background-color: #ebdbb2 !important;
+  color: #3c3836 !important;
+}
+
+.panel-arrowcontent {
+  background-color: #f2e5bc !important;
+  color: var(--gb-fg1) !important;
+}
+
+.notification {
+  background-color: #ebdbb2 !important;
+  color: var(--gb-fg1) !important;
+}
+
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--gb-bg2) #f2e5bc !important;
+}
+
+#navigator-toolbox {
+  border-bottom: none !important;
+}

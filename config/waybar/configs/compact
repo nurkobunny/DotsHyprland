@@ -1,0 +1,14 @@
+{
+    "style": "~/.config/waybar/style.css",
+    "include": [
+        "~/.config/waybar/Modules",
+        "~/.config/waybar/ModulesWorkspaces",
+        "~/.config/waybar/ModulesCustom"
+    ],
+    "layer": "top",
+    "position": "top",
+    "margin-top": 5,
+    "modules-left": ["hyprland/workspaces#rw"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "tray", "custom/layout"]
+}

@@ -1,0 +1,12 @@
+{
+  "catppuccin-theme-settings@@catppuccin-theme-dark": "ctp-macchiato",
+  "catppuccin-theme-settings@@catppuccin-theme-accents": "ctp-full-palette",
+  "gruvbox-material-theme-override@@light0-hard": "#FBF1C7",
+  "gruvbox-material-theme-override@@light0": "#F9F5D7",
+  "gruvbox-material-theme-override@@light0-soft": "#F2E5BC",
+  "gruvbox-material-theme-override@@light1": "#EBDBB2",
+  "gruvbox-material-theme-override@@light2": "#D5C4A1",
+  "gruvbox-material-theme-override@@light3": "#BDAE93",
+  "gruvbox-material-theme-override@@light4": "#A89984",
+  "rosé-pine-theme-settings@@rosé-pine-theme": "rose-moon"
+}

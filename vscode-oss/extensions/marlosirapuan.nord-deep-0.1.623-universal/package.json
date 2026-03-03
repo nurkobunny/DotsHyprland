@@ -1,0 +1,29 @@
+{
+	"name": "nord-deep",
+	"displayName": "Nord Deep",
+	"description": "Another Nord-based vscode theme",
+	"repository": "https://github.com/marlosirapuan/vscode-theme-nord-deep",
+	"publisher": "marlosirapuan",
+	"version": "0.1.623",
+	"icon": "icon.png",
+	"engines": {
+		"vscode": "^1.39.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Nord Deep",
+				"uiTheme": "vs-dark",
+				"path": "./themes/nord-deep-color-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"installedTimestamp": 1759008901799,
+		"targetPlatform": "universal",
+		"size": 466436
+	}
+}

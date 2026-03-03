@@ -1,0 +1,19 @@
+{
+  "name": "dracula-custom-theme",
+  "displayName": "Dracula Custom Theme",
+  "description": "A custom Dracula theme based on the official palette.",
+  "version": "1.0.0",
+  "publisher": "YourName",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Dracula Custom",
+        "uiTheme": "vs-dark",
+        "path": "./themes/DraculaCustom.json"
+      }
+    ]
+  }
+}

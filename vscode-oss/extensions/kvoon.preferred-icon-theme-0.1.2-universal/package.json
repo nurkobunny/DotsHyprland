@@ -1,0 +1,107 @@
+{
+	"publisher": "kvoon",
+	"name": "preferred-icon-theme",
+	"displayName": "Preferred Icon Theme",
+	"version": "0.1.2",
+	"private": true,
+	"packageManager": "pnpm@9.7.1",
+	"description": "Detect preferred light/dark icon theme",
+	"author": "Kevin Kwong <a1176079417@gmail.com>",
+	"license": "MIT",
+	"funding": "https://github.com/sponsors/kvoon3",
+	"homepage": "https://github.com/kvoon3/preferred-icon-theme#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kvoon3/preferred-icon-theme"
+	},
+	"bugs": {
+		"url": "https://github.com/kvoon3/preferred-icon-theme/issues"
+	},
+	"sponsor": {
+		"url": "https://github.com/sponsors/kvoon3"
+	},
+	"keywords": [
+		"color",
+		"theme",
+		"icon",
+		"auto",
+		"dark",
+		"light"
+	],
+	"categories": [
+		"Themes",
+		"Other"
+	],
+	"main": "./dist/index.js",
+	"icon": "res/icon.png",
+	"files": [
+		"LICENSE.md",
+		"dist/*",
+		"res/*"
+	],
+	"engines": {
+		"vscode": "^1.90.0"
+	},
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"contributes": {
+		"commands": [],
+		"configuration": {
+			"type": "object",
+			"title": "Preferred Icon Theme",
+			"properties": {
+				"preferredIconTheme.enable": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enable preferred icon theme"
+				},
+				"preferredIconTheme.light": {
+					"type": "string",
+					"description": "Preferred light icon theme"
+				},
+				"preferredIconTheme.dark": {
+					"type": "string",
+					"description": "Preferred dark icon theme"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"build": "tsup src/index.ts --external vscode",
+		"dev": "nr build --watch",
+		"prepare": "nr update",
+		"update": "vscode-ext-gen --output src/generated/meta.ts --scope preferredIconTheme",
+		"lint": "eslint .",
+		"vscode:prepublish": "nr build",
+		"publish": "vsce publish --no-dependencies",
+		"pack": "vsce package --no-dependencies",
+		"test": "vitest",
+		"typecheck": "tsc --noEmit",
+		"release": "bumpp"
+	},
+	"devDependencies": {
+		"@antfu/eslint-config": "^2.26.0",
+		"@antfu/ni": "^0.22.4",
+		"@types/node": "^22.4.1",
+		"@types/vscode": "^1.90.0",
+		"@vscode/vsce": "^3.0.0",
+		"bumpp": "^9.5.1",
+		"eslint": "^9.9.0",
+		"esno": "^4.7.0",
+		"ovsx": "^0.10.5",
+		"pnpm": "^9.7.1",
+		"reactive-vscode": "^0.2.0",
+		"tsup": "^8.2.4",
+		"typescript": "^5.5.4",
+		"vite": "^5.4.1",
+		"vitest": "^2.0.5",
+		"vscode-ext-gen": "^0.4.1",
+		"vsxpub": "^0.1.1"
+	},
+	"__metadata": {
+		"installedTimestamp": 1760000811472,
+		"targetPlatform": "universal",
+		"size": 63022
+	}
+}

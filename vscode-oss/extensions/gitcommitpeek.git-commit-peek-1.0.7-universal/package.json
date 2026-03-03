@@ -1,0 +1,75 @@
+{
+	"name": "git-commit-peek",
+	"displayName": "Git Commit Peek",
+	"description": "Git Commit Peek shows the files changed in the last commit. Simple and fast functionality.",
+	"version": "1.0.7",
+	"engines": {
+		"vscode": "^1.80.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"views": {
+			"scm": [
+				{
+					"id": "lastCommitFiles",
+					"name": "Last Commit Files",
+					"icon": "images/smc-icon-light.svg"
+				}
+			]
+		},
+		"configuration": {
+			"title": "Git Commit Peek",
+			"properties": {
+				"git-commit-peek.treeViewType": {
+					"type": "string",
+					"enum": [
+						"list",
+						"tree"
+					],
+					"default": "list",
+					"description": "Choose how to display the changed files view",
+					"enumDescriptions": [
+						"Display files as a flat list",
+						"Display files in a tree structure"
+					]
+				}
+			}
+		}
+	},
+	"icon": "images/icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wmassa/git-commit-peek.git"
+	},
+	"publisher": "GitCommitPeek",
+	"scripts": {
+		"vscode:prepublish": "pnpm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "pnpm run compile && pnpm run lint",
+		"lint": "eslint src",
+		"test": "vscode-test",
+		"package": "pnpm vsce package --no-dependencies",
+		"publish": "pnpm vsce publish --no-dependencies"
+	},
+	"devDependencies": {
+		"@types/mocha": "^10.0.10",
+		"@types/node": "20.x",
+		"@types/vscode": "^1.80.0",
+		"@typescript-eslint/eslint-plugin": "^8.31.1",
+		"@typescript-eslint/parser": "^8.31.1",
+		"@vscode/test-cli": "^0.0.11",
+		"@vscode/test-electron": "^2.5.2",
+		"eslint": "^9.25.1",
+		"typescript": "^5.8.3"
+	},
+	"license": "MIT",
+	"__metadata": {
+		"installedTimestamp": 1771437832492,
+		"targetPlatform": "universal",
+		"size": 245299
+	}
+}

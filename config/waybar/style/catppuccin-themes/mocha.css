@@ -1,0 +1,36 @@
+/*
+*
+* Gruvbox Material Dark Hard palette
+* Adapted for Waybar
+*
+*/
+
+@define-color base   #1d2021;
+@define-color mantle #1b1d1e;
+@define-color crust  #141617;
+
+@define-color text     #d4be98;
+@define-color subtext0 #bdae93; 
+@define-color subtext1 #ebdbb2; 
+@define-color surface0 #282828;
+@define-color surface1 #32302f;
+@define-color surface2 #3c3836;
+
+@define-color overlay0 #504945;
+@define-color overlay1 #665c54;
+@define-color overlay2 #7c6f64;
+
+@define-color blue      #7daea3;
+@define-color lavender  #a4b9ef;
+@define-color sapphire  #89b482;
+@define-color sky       #a9b665;
+@define-color teal      #89b482;
+@define-color green     #a9b665;
+@define-color yellow    #d8a657;
+@define-color peach     #e78a4e;
+@define-color maroon    #d3869b;
+@define-color red       #ea6962;
+@define-color mauve     #d3869b;
+@define-color pink      #d3869b;
+@define-color flamingo  #e78a4e;
+@define-color rosewater #f2e5bc;

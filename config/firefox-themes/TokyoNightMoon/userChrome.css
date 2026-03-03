@@ -1,0 +1,216 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+:root {
+  --gb-bg0: #222436;
+  --gb-bg0-hard: #1e2030;
+  --gb-bg0-soft: #2d3f76;
+  --gb-bg1: #2f334d;
+  --gb-bg2: #3b4261;
+  --gb-bg3: #444a73;
+  --gb-bg4: #545c7e;
+  
+  --gb-fg0: #c8d3f5;
+  --gb-fg1: #b4c2f0;
+  --gb-fg2: #a9b1d6;
+  --gb-fg3: #949ae5;
+  --gb-fg4: #828bb8;
+  
+  --gb-red: #ff757f;
+  --gb-green: #c3e88d;
+  --gb-yellow: #ffc777;
+  --gb-blue: #82a1ff;
+  --gb-purple: #fca7ea;
+  --gb-aqua: #4fd6be;
+  --gb-orange: #ff966c;
+  --gb-grey: #636da6;
+  
+  --gb-bg-statusline1: var(--gb-bg0);
+  --gb-bg-statusline2: var(--gb-bg1);
+  --gb-bg-statusline3: var(--gb-bg2);
+}
+
+* {
+  font-family: "JetBrains Mono", monospace !important;
+}
+
+#main-window {
+  background-color: #222436 !important;
+  color: var(--gb-fg1) !important;
+}
+
+@-moz-document url("about:home"), url("about:newtab") {
+  body {
+    background-color: #222436 !important;
+    color: #c8d3f5 !important;
+  }
+
+  .search-wrapper, .top-sites, .section {
+    background-color: #222436 !important;
+    color: #c8d3f5 !important;
+  }
+
+  a {
+    color: #82a1ff !important;
+  }
+}
+
+#nav-bar {
+  background-color: #222436 !important;
+}
+
+#urlbar {
+  background-color: #2f334d !important;
+  color: var(--gb-fg1) !important;
+}
+
+#urlbar:hover {
+  background-color: #2f334d !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+  background-color: #222436 !important;
+}
+
+.urlbarView {
+  background-color: #222436 !important;
+}
+
+.urlbarView-row {
+  color: var(--gb-fg1) !important;
+}
+
+.urlbarView-row:hover {
+  background-color: #2f334d !important;
+}
+
+.tab-background {
+  background-color: #222436 !important;
+  margin: 2px !important;
+}
+
+.tab-background[selected="true"] {
+  background-color: #2f334d !important;
+}
+
+.tab-label {
+  color: var(--gb-fg1) !important;
+}
+
+.tab-secondary-label {
+  color: var(--gb-fg4) !important;
+}
+
+.tab-icon-image {
+  filter: brightness(1.2) !important;
+}
+
+#TabsToolbar {
+  background-color: #222436 !important;
+}
+
+#PersonalToolbar {
+  background-color: #222436 !important;
+}
+
+#sidebar-box {
+  background-color: #222436 !important;
+  color: var(--gb-fg1) !important;
+}
+
+.sidebar-placesTree {
+  background-color: #222436 !important;
+  color: var(--gb-fg1) !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row {
+  background-color: #222436 !important;
+  color: var(--gb-fg1) !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row(selected) {
+  background-color: #2f334d !important;
+  color: var(--gb-fg0) !important;
+}
+
+#toolbar-menubar {
+  background-color: #222436 !important;
+  color: var(--gb-fg1) !important;
+}
+
+menupopup {
+  background-color: #222436 !important;
+  color: var(--gb-fg1) !important;
+}
+
+menuitem:hover {
+  background-color: #2f334d !important;
+  color: var(--gb-fg0) !important;
+}
+
+button {
+  background-color: #2f334d !important;
+  color: var(--gb-fg1) !important;
+}
+
+button:hover {
+  background-color: var(--gb-bg2) !important;
+  color: var(--gb-fg0) !important;
+}
+
+toolbar {
+  background-color: #222436 !important;
+}
+
+.searchbar-textbox {
+  background-color: #2f334d !important;
+  color: var(--gb-fg1) !important;
+}
+
+scrollbar {
+  background-color: #222436 !important;
+}
+
+scrollbarthumb {
+  background-color: #3b4261 !important;
+}
+
+scrollbarthumb:hover {
+  background-color: #444a73 !important;
+}
+
+#statuspanel {
+  background-color: #222436 !important;
+  color: var(--gb-fg1) !important;
+}
+
+findbar {
+  background-color: #222436 !important;
+}
+
+#downloadsPanel {
+  background-color: #222436 !important;
+}
+
+input {
+  background-color: #2f334d !important;
+  color: var(--gb-fg1) !important;
+}
+
+.panel-arrowcontent {
+  background-color: #222436 !important;
+  color: var(--gb-fg1) !important;
+}
+
+.notification {
+  background-color: #2f334d !important;
+  color: var(--gb-fg1) !important;
+}
+
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--gb-bg2) #222436 !important;
+}
+
+#navigator-toolbox {
+  border-bottom: none !important;
+}

@@ -1,0 +1,410 @@
+/* =============================================================================
+ * Gruvbox Material Dark Hard Theme for Waybar
+ * Based on: https://github.com/sainnhe/gruvbox-material
+ * ============================================================================= */
+
+/* Gruvbox Material Dark Hard Color Palette */
+@define-color bg0_hard #282828;
+@define-color bg0 #282828;
+@define-color bg0_soft #32302f;
+@define-color bg1 #3c3836;
+@define-color bg2 #504945;
+@define-color bg3 #665c54;
+@define-color bg4 #7c6f64;
+
+@define-color fg0 #fbf1c7;
+@define-color fg1 #ebdbb2;
+@define-color fg2 #d5c4a1;
+@define-color fg3 #bdae93;
+@define-color fg4 #a89984;
+
+@define-color red #fb4934;
+@define-color green #b8bb26;
+@define-color yellow #fabd2f;
+@define-color blue #83a598;
+@define-color purple #d3869b;
+@define-color aqua #8ec07c;
+@define-color orange #fe8019;
+@define-color gray #928374;
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Fira Code", monospace;
+    font-weight: bold;
+    min-height: 0;
+    font-size: 97%;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+window#waybar {
+    background-color: @bg0_hard;
+    border-radius: 5px;
+    border: 1px solid @bg1; /* Единственная рамка вокруг всего waybar */
+}
+
+tooltip {
+    background: @bg0_hard;
+    opacity: 1;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: @bg1;
+}
+
+tooltip label {
+    color: @fg1;
+}
+
+#taskbar button,
+#workspaces button {
+    color: @fg4;
+    background-color: transparent;
+    padding: 4px 6px 4px 4px;
+    border: none;
+}
+
+
+#custom-music{
+    margin-left: 25px;
+}
+
+#taskbar button.active,
+#workspaces button.active {
+    color: @red;
+    background-color: @bg1;
+    border: none;
+}
+
+#taskbar button.focused,
+#workspaces button.focused {
+    color: @fg0;
+    background: @bg2;
+    border-radius: 5px;
+    border: none;
+}
+
+#workspaces button.urgent {
+    color: @bg0_hard;
+    background: @red;
+    border-radius: 5px;
+    border: none;
+}
+
+#taskbar button:hover,
+#workspaces button:hover {
+    background: @bg1;
+    color: @fg0;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Убираем ВСЕ рамки у модулей */
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#mpris,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
+#pulseaudio-slider,
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-backlight,
+#custom-browser,
+#custom-cava_mviz,
+#custom-cycle_wall,
+#custom-dot_update,
+#custom-file_manager,
+#custom-keybinds,
+#custom-keyboard,
+#custom-light_dark,
+#custom-lock,
+#custom-hint,
+#custom-hypridle,
+#custom-menu,
+#custom-playerctl,
+#custom-power_vertical,
+#custom-power,
+#custom-quit,
+#custom-reboot,
+#custom-settings,
+#custom-spotify,
+#custom-swaync,
+#custom-tty,
+#custom-updater,
+#custom-hyprpicker,
+#custom-weather,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.default, 
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.severe,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.sunnyDay,
+#hyprland-window {
+    opacity: 1;
+    padding: 4px 6px;
+    color: @fg1;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+#idle_inhibitor {
+    color: @purple;
+}
+
+#hyprland-window {
+    color: @blue;
+}
+
+#mpris {
+    color: @fg0;
+}
+
+#battery {
+    color: @green;
+    padding-left: 15px;
+}
+
+@keyframes blink {
+    to {
+        background-color: @red;
+        color: @fg0;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Убираем рамки у кнопок питания и меню */
+#custom-lock,
+#custom-power,
+#custom-menu {
+    color: @red;
+    border: none;
+    border-radius: 0;
+    font-weight: bolder;
+    padding: 4px 8px;
+    background-color: transparent;
+    margin: 0;
+}
+
+#custom-menu {
+    color: @blue;
+}
+
+#network {
+    color: @purple;
+}
+
+#network.disconnected {
+    color: @gray;
+}
+
+#backlight {
+    color: @yellow;
+}
+
+#custom-weather {
+    color: @green;
+}
+
+#pulseaudio {
+    color: @blue;
+}
+
+#pulseaudio.muted {
+    color: @gray;
+}
+
+#clock,
+#clock-calender {
+    color: @aqua;
+    font-weight: bold;
+}
+
+#cpu {
+    color: @yellow;
+}
+
+#cpu.high {
+    color: @orange;
+}
+
+#cpu.critical {
+    color: @red;
+}
+
+#memory {
+    color: @aqua;
+}
+
+#memory.high {
+    color: @orange;
+}
+
+#memory.critical {
+    color: @red;
+}
+
+#temperature {
+    color: @orange;
+}
+
+#temperature.critical {
+    color: @red;
+}
+
+#disk {
+    color: @green;
+}
+
+/* Слайдеры */
+#backlight-slider trough,
+#pulseaudio-slider trough {
+    min-height: 100px;
+    min-width: 7px;
+    border-radius: 5px;
+    background-color: @bg1;
+    border: none;
+}
+
+#backlight-slider highlight,
+#pulseaudio-slider highlight {
+    min-width: 5px;
+    border-radius: 5px;
+}
+
+#pulseaudio-slider highlight {
+    background-color: @blue;
+}
+
+#backlight-slider highlight {
+    background-color: @yellow;
+}
+
+#backlight-slider slider,
+#pulseaudio-slider slider {
+    min-height: 7px;
+    min-width: 15px;
+    opacity: 0;
+    background-color: @fg1;
+    border-radius: 3px;
+    box-shadow: 1px 2px 3px 1px @bg0_hard;
+}
+
+/* Системный лоток без рамки */
+#tray {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 4px 8px;
+    margin: 0;
+}
+
+#window {
+    color: @fg1;
+    font-weight: bold;
+}
+
+#mode {
+    background-color: @red;
+    color: @fg0;
+    border-radius: 0;
+    padding: 4px 8px;
+    margin: 0;
+    border: none;
+}
+
+#bluetooth {
+    color: @blue;
+}
+
+#bluetooth.disconnected {
+    color: @gray;
+}
+
+#power-profiles-daemon {
+    color: @green;
+}
+
+#keyboard-state {
+    color: @fg1;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 4px 8px;
+    margin: 0;
+    border: none;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state label.locked {
+    background-color: @green;
+    color: @bg0_hard;
+    border-radius: 3px;
+}
+
+#wireplumber {
+    color: @blue;
+}
+
+#wireplumber.muted {
+    color: @gray;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: transparent;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#custom-vpn {
+    color: @aqua;
+}
+#custom-vpn.ON {
+    color: @green;
+}
+#custom-vpn.OFF {
+    color: @red;
+}
+
+#custom-gemini {
+    color: @purple;
+    background-color: transparent;
+    font-size: 25px;
+    padding: 0 5px;
+}
+
+#custom-gemini:hover {
+    color: @blue;
+    background-color: @bg2;
+    border-radius: 5px;
+}

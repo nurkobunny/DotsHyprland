@@ -1,0 +1,402 @@
+@define-color base #faf4ed;
+@define-color mantle #fffaf3;
+@define-color crust #f2e9e1;
+
+@define-color text #575279;
+@define-color subtext0 #797593;
+@define-color subtext1 #9893a5;
+
+@define-color surface0 #f2e9e1;
+@define-color surface1 #dfdad9;
+@define-color surface2 #cecacd;
+
+@define-color overlay0 #9893a5;
+@define-color overlay1 #797593;
+@define-color overlay2 #575279;
+
+@define-color iris #907aa9;
+@define-color pine #286983;
+@define-color foam #56949f;
+@define-color rose #d7827e;
+@define-color gold #ea9d34;
+@define-color love #b4637a;
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Fira Code", monospace;
+    font-weight: bold;
+    min-height: 0;
+    font-size: 97%;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+window#waybar {
+    background-color: @base;
+    border-radius: 5px;
+    border: 1px solid @surface0;
+}
+
+tooltip {
+    background: @mantle;
+    opacity: 1;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: @surface0;
+}
+
+tooltip label {
+    color: @text;
+}
+
+#taskbar button,
+#workspaces button {
+    color: @overlay0;
+    background-color: transparent;
+    padding: 4px 6px 4px 4px;
+    border: none;
+}
+
+#taskbar button.active,
+#workspaces button.active {
+    color: @iris;
+    background-color: @surface0;
+    border: none;
+}
+
+#taskbar button.focused,
+#workspaces button.focused {
+    color: @text;
+    background: @surface1;
+    border-radius: 5px;
+    border: none;
+}
+
+#workspaces button.urgent {
+    color: @base;
+    background: @love;
+    border-radius: 5px;
+    border: none;
+}
+
+#custom-music {
+    margin-left: 25px;
+}
+
+#taskbar button:hover,
+#workspaces button:hover {
+    background: @surface0;
+    color: @text;
+    border-radius: 5px;
+    border: none;
+}
+
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#mpris,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
+#pulseaudio-slider,
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-backlight,
+#custom-browser,
+#custom-cava_mviz,
+#custom-cycle_wall,
+#custom-dot_update,
+#custom-file_manager,
+#custom-keybinds,
+#custom-keyboard,
+#custom-light_dark,
+#custom-lock,
+#custom-hint,
+#custom-hypridle,
+#custom-menu,
+#custom-playerctl,
+#custom-power_vertical,
+#custom-power,
+#custom-quit,
+#custom-reboot,
+#custom-settings,
+#custom-spotify,
+#custom-swaync,
+#custom-tty,
+#custom-updater,
+#custom-hyprpicker,
+#custom-weather,
+#hyprland-window {
+    opacity: 1;
+    padding: 4px 6px;
+    color: @text;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+#idle_inhibitor {
+    color: @iris;
+}
+
+#hyprland-window {
+    color: @foam;
+}
+
+#mpris {
+    color: @text;
+}
+
+#battery {
+    color: @pine;
+    padding-left: 15px;
+}
+
+@keyframes blink {
+    to {
+        background-color: @love;
+        color: @base;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: @love;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-lock,
+#custom-power,
+#custom-menu {
+    border: none;
+    border-radius: 0;
+    font-weight: bolder;
+    padding: 4px 8px;
+    background-color: transparent;
+    margin: 0;
+}
+
+#custom-menu {
+    color: @pine;
+}
+
+#custom-power {
+    color: @love;
+}
+
+#custom-lock {
+    color: @iris;
+}
+
+#network {
+    color: @iris;
+}
+
+#network.disconnected {
+    color: @overlay0;
+}
+
+#backlight {
+    color: @gold;
+}
+
+#custom-weather {
+    color: @foam;
+}
+
+#pulseaudio {
+    color: @foam;
+}
+
+#pulseaudio.muted {
+    color: @overlay0;
+}
+
+#clock,
+#clock-calender {
+    color: @rose;
+    font-weight: bold;
+}
+
+#cpu {
+    color: @gold;
+}
+
+#cpu.high {
+    color: @rose;
+}
+
+#cpu.critical {
+    color: @love;
+}
+
+#memory {
+    color: @foam;
+}
+
+#memory.high {
+    color: @rose;
+}
+
+#memory.critical {
+    color: @love;
+}
+
+#temperature {
+    color: @rose;
+}
+
+#temperature.critical {
+    color: @love;
+}
+
+#disk {
+    color: @pine;
+}
+
+#backlight-slider trough,
+#pulseaudio-slider trough {
+    min-height: 100px;
+    min-width: 7px;
+    border-radius: 5px;
+    background-color: @surface0;
+    border: none;
+}
+
+#backlight-slider highlight,
+#pulseaudio-slider highlight {
+    min-width: 5px;
+    border-radius: 5px;
+}
+
+#pulseaudio-slider highlight {
+    background-color: @foam;
+}
+
+#backlight-slider highlight {
+    background-color: @gold;
+}
+
+#backlight-slider slider,
+#pulseaudio-slider slider {
+    min-height: 7px;
+    min-width: 15px;
+    opacity: 0;
+    background-color: @text;
+    border-radius: 3px;
+    box-shadow: 1px 2px 3px 1px @mantle;
+}
+
+#tray {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 4px 8px;
+    margin: 0;
+}
+
+#window {
+    color: @text;
+    font-weight: bold;
+}
+
+#mode {
+    background-color: @love;
+    color: @base;
+    border-radius: 0;
+    padding: 4px 8px;
+    margin: 0;
+    border: none;
+}
+
+#bluetooth {
+    color: @pine;
+}
+
+#bluetooth.disconnected {
+    color: @overlay0;
+}
+
+#power-profiles-daemon {
+    color: @pine;
+}
+
+#keyboard-state {
+    color: @text;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 4px 8px;
+    margin: 0;
+    border: none;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state label.locked {
+    background-color: @pine;
+    color: @base;
+    border-radius: 3px;
+}
+
+#wireplumber {
+    color: @foam;
+}
+
+#wireplumber.muted {
+    color: @overlay0;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: transparent;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#custom-vpn {
+    color: @iris; 
+    background-color: transparent;
+    border-radius: 0;
+    padding: 4px 8px;
+    margin: 0;
+}
+
+#custom-vpn.ON {
+    color: @pine; 
+}
+
+#custom-vpn.OFF {
+    color: @love;
+}
+
+#custom-gemini {
+    color: @iris;
+    background-color: transparent;
+    font-size: 25px;
+    padding: 0 5px;
+}
+
+#custom-gemini:hover {
+    color: @pine;
+    background-color: @surface0;
+    border-radius: 10px;
+}

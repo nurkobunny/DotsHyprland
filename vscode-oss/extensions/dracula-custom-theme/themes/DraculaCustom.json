@@ -1,0 +1,161 @@
+{
+  "name": "Dracula Custom",
+  "colors": {
+    // Основные цвета
+    "editor.background": "#282a36",
+    "editor.foreground": "#f8f8f2",
+    "activityBar.background": "#282a36",
+    "sideBar.background": "#282a36",
+    "statusBar.background": "#44475a",
+    "statusBar.foreground": "#f8f8f2",
+    "titleBar.activeBackground": "#282a36",
+    "titleBar.activeForeground": "#f8f8f2",
+    "panel.background": "#282a36",
+    "terminal.background": "#282a36",
+    
+    // Цвета выделения и фокуса
+    "selection.background": "#44475a",
+    "editor.selectionBackground": "#44475a",
+    "editorLineNumber.foreground": "#6272a4",
+    "editorLineNumber.activeForeground": "#f8f8f2",
+    "editorCursor.foreground": "#f8f8f2",
+    "list.hoverBackground": "#44475a55", // Слегка прозрачный для наведения
+    "list.activeSelectionBackground": "#44475a",
+    
+    // UI-элементы
+    "editorGroupHeader.tabsBackground": "#282a36",
+    "tab.inactiveBackground": "#282a36",
+    "tab.activeBackground": "#44475a",
+    "button.background": "#50fa7b", // Яркий зеленый
+    "button.foreground": "#282a36",
+    "input.background": "#44475a",
+    "dropdown.background": "#44475a",
+    "peekView.border": "#ff79c6",
+    "notificationCenterHeader.background": "#44475a"
+  },
+  "tokenColors": [
+    {
+      "scope": [
+        // Комментарии и документация
+        "comment",
+        "punctuation.definition.comment",
+        "string.comment"
+      ],
+      "settings": {
+        "foreground": "#6272a4"
+      }
+    },
+    {
+      "scope": [
+        // Ключевые слова (if, else, function, class, var, return)
+        "keyword",
+        "storage.type",
+        "storage.modifier"
+      ],
+      "settings": {
+        "foreground": "#ff79c6"
+      }
+    },
+    {
+      "scope": [
+        // Строки и символы
+        "string",
+        "punctuation.definition.string",
+        "variable.parameter",
+        "entity.other.inherited-class"
+      ],
+      "settings": {
+        "foreground": "#f1fa8c"
+      }
+    },
+    {
+      "scope": [
+        // Функции и методы
+        "entity.name.function",
+        "meta.function-call",
+        "support.function"
+      ],
+      "settings": {
+        "foreground": "#50fa7b"
+      }
+    },
+    {
+      "scope": [
+        // Числа, логические значения (true, false, null)
+        "constant.numeric",
+        "constant.language",
+        "constant.other.symbol",
+        "constant.character",
+        "support.constant"
+      ],
+      "settings": {
+        "foreground": "#bd93f9"
+      }
+    },
+    {
+      "scope": [
+        // Операторы и пунктуация
+        "keyword.operator",
+        "punctuation.separator",
+        "punctuation.accessor",
+        "punctuation.terminator",
+        "meta.brace",
+        "punctuation.definition.parameters"
+      ],
+      "settings": {
+        "foreground": "#ff79c6"
+      }
+    },
+    {
+      "scope": [
+        // Классы и типы
+        "entity.name.class",
+        "entity.name.type",
+        "support.class",
+        "support.type"
+      ],
+      "settings": {
+        "foreground": "#ffb86c"
+      }
+    },
+    {
+      "scope": [
+        // Переменные и свойства
+        "variable",
+        "support.variable",
+        "markup.bold"
+      ],
+      "settings": {
+        "foreground": "#f8f8f2"
+      }
+    },
+    {
+      "scope": [
+        // JSX/HTML/XML: Теги
+        "tag",
+        "punctuation.definition.tag"
+      ],
+      "settings": {
+        "foreground": "#ff79c6"
+      }
+    },
+    {
+      "scope": [
+        // JSX/HTML/XML: Атрибуты тегов
+        "entity.other.attribute-name"
+      ],
+      "settings": {
+        "foreground": "#50fa7b"
+      }
+    },
+    {
+      "scope": [
+        // JSX/HTML/XML: Значения атрибутов
+        "meta.attribute-string"
+      ],
+      "settings": {
+        "foreground": "#f1fa8c"
+      }
+    }
+  ]
+}

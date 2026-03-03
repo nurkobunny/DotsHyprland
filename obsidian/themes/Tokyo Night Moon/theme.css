@@ -1,0 +1,221 @@
+:root {
+  --default-font: "JetBrains Mono", monospace;
+  --default-font: "JetBrains Mono Nerd Font", monospace;
+  --font-monospace: "Anonymouse Pro for Powerline", monospace;
+}
+
+.theme-dark {
+  --accent-h: 221;
+  --accent-s: 82%;
+  --accent-l: 75%;
+
+  --bg_dark2_x: 24, 25, 38;
+  --bg_dark2: rgb(var(--bg_dark2_x));
+  --bg_dark_x: 30, 32, 48;
+  --bg_dark: rgb(var(--bg_dark_x));
+  --bg_x: 34, 36, 54;
+  --bg: rgb(var(--bg_x));
+  --bg_highlight_x: 53, 58, 89;
+  --bg_highlight: rgb(var(--bg_highlight_x));
+  --bg_highlight_dark_x: 42, 46, 70;
+  --bg_highlight_dark: rgb(var(--bg_highlight_dark_x));
+  --terminal_black_x: 68, 75, 106;
+  --terminal_black: rgb(var(--terminal_black_x));
+  --fg_x: 199, 210, 253;
+  --fg: rgb(var(--fg_x));
+  --fg_dark_x: 170, 178, 210;
+  --fg_dark: rgb(var(--fg_dark_x));
+  --comment_x: 99, 109, 153;
+  --comment: rgb(var(--comment_x));
+  --blue0_x: 54, 75, 133;
+  --blue0: rgb(var(--blue0_x));
+  --blue_x: 130, 170, 255;
+  --blue: rgb(var(--blue_x));
+  --cyan_hsl: 191 97% 77%;
+  --cyan_x: 137, 221, 255;
+  --cyan: rgb(var(--cyan_x));
+  --magenta_x: 199, 146, 234;
+  --magenta: rgb(var(--magenta_x));
+  --purple_x: 247, 126, 234;
+  --purple: rgb(var(--purple_x));
+  --orange_x: 255, 150, 99;
+  --orange: rgb(var(--orange_x));
+  --yellow_x: 255, 198, 112;
+  --yellow: rgb(var(--yellow_x));
+  --green_x: 195, 232, 141;
+  --green: rgb(var(--green_x));
+  --teal_x: 79, 214, 184;
+  --teal: rgb(var(--teal_x));
+  --red_x: 255, 117, 127;
+  --red: rgb(var(--red_x));
+  --red1_x: 219, 75, 75;
+  --red1: rgb(var(--red1_x));
+  --unknown: #ffffff;
+
+  --external-link-filter: invert(41%) sepia(12%) saturate(1450%)
+    hue-rotate(190deg) brightness(92%) contrast(89%);
+}
+
+.theme-dark {
+  --color_red_rgb: var(--red_x);
+  --color-red: var(--red);
+  --color_purple_rgb: var(--purple_x);
+  --color-purple: var(--purple);
+  --color_green_rgb: var(--green_x);
+  --color-green: var(--green);
+  --color_cyan_rgb: var(--cyan_x);
+  --color-cyan: var(--cyan);
+  --color_blue_rgb: var(--blue_x);
+  --color-blue: var(--blue);
+  --color_yellow_rgb: var(--yellow_x);
+  --color-yellow: var(--yellow);
+  --color_orange_rgb: var(--orange_x);
+  --color-orange: var(--orange);
+  --color_pink_rgb: var(--magenta_x);
+  --color-pink: var(--magenta);
+
+  --background-primary: var(--bg);
+  --background-primary-alt: var(--bg_dark);
+  --background-secondary: var(--bg_dark);
+  --background-secondary-alt: var(--bg_dark2);
+
+  --background-modifier-border: var(--bg_highlight);
+  --background-modifier-border-focus: var(--blue);
+  --background-modifier-border-hover: var(--bg_highlight);
+  --background-modifier-form-field: var(--bg_dark2);
+  --background-modifier-form-field-highlighted: var(--bg_dark);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.4);
+  --background-modifier-success: var(--green);
+  --background-modifier-error: rgba(var(--red_x), 0.8);
+  --background-modifier-error-hover: var(--red);
+  --background-modifier-cover: rgba(var(--bg_dark_x), 0.8);
+  --background-modifier-hover: var(--bg_highlight);
+  --background-modifier-message: rgba(var(--bg_highlight_x), 0.9);
+
+  --text-normal: var(--fg);
+  --text-faint: var(--comment);
+  --text-muted: var(--fg_dark);
+
+  --h1-color: var(--red);
+  --h2-color: var(--orange);
+  --h3-color: var(--yellow);
+  --h4-color: var(--green);
+  --h5-color: var(--blue);
+  --h6-color: var(--purple);
+
+  --tag-color: var(--cyan);
+  --tag-background: rgba(var(--cyan_x), 0.1);
+
+  --titlebar-text-color-focused: var(--fg);
+  --inline-title-color: var(--blue);
+
+  --text-error: var(--red1);
+  --text-error-hover: var(--red);
+  --text-on-accent: var(--bg_dark);
+  --interactive-normal: var(--bg_dark2);
+  --interactive-hover: var(--bg_highlight);
+  --interactive-success: var(--green);
+
+  --text-highlight-bg: rgba(var(--yellow_x), 0.2);
+  --text-highlight-fg: var(--fg);
+
+  --bold-color: var(--orange);
+  --italic-color: var(--magenta);
+
+  --checkbox-color: var(--blue);
+  --checkbox-color-hover: var(--cyan);
+  --checkbox-border-color: var(--blue);
+  --checkbox-border-color-hover: var(--cyan);
+  --checklist-done-color: var(--comment);
+
+  --table-header-background: var(--bg_dark);
+  --table-header-background-hover: var(--bg_highlight);
+  --table-row-alt-background: rgba(var(--bg_dark_x), 0.5);
+  --table-row-background-hover: var(--bg_highlight);
+
+  --text-selection: rgba(var(--blue_x), 0.25);
+  --flashing-background: rgba(var(--blue_x), 0.2);
+
+  --code-normal: var(--fg);
+  --code-background: var(--bg_dark2);
+
+  --mermaid-note: var(--blue0);
+  --mermaid-actor: var(--fg_dark);
+  --mermaid-loopline: var(--blue);
+
+  --icon-color-hover: var(--blue);
+  --icon-color-focused: var(--magenta);
+
+  --nav-item-color-hover: var(--fg);
+  --nav-item-background-hover: var(--bg_highlight);
+  --nav-item-color-active: var(--blue);
+  --nav-item-background-active: var(--bg_highlight);
+  --nav-file-tag: var(--comment);
+  --nav-indentation-guide-color: var(--bg_highlight);
+
+  --indentation-guide-color: var(--bg_highlight);
+  --indentation-guide-color-active: var(--comment);
+
+  --graph-line: var(--bg_highlight);
+  --graph-node: var(--fg_dark);
+  --graph-node-tag: var(--magenta);
+  --graph-node-attachment: var(--blue);
+
+  --tab-text-color-focused-active: var(--blue);
+  --tab-text-color-focused-active-current: var(--fg);
+
+  --modal-border-color: var(--bg_highlight);
+  --prompt-border-color: var(--bg_highlight);
+  --slider-track-background: var(--bg_highlight);
+
+  --border-width: 1px;
+
+  --blockquote-background-color: var(--bg_dark);
+  --callout-quote: var(--fg_dark);
+
+  --embed-background: var(--bg_dark);
+  --embed-padding: 1rem;
+
+  --canvas-color: var(--bg_dark2);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg_highlight);
+  border-radius: 10px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 4px;
+}
+
+.tooltip {
+  color: var(--fg);
+}
+
+span.cm-formatting.cm-formatting-link-string.cm-string.cm-url.external-link {
+  filter: var(--external-link-filter);
+}
+
+.notice {
+  background-color: var(--bg_dark);
+  border: 1px solid var(--bg_highlight);
+}
+
+.callout[data-callout="quote"],
+.callout[data-callout="cite"] {
+  background-color: rgba(var(--bg_highlight_dark_x), 0.5);
+}
+
+.cm-vim-message {
+  color: var(--red);
+}
+
+.cm-atom {
+  color: var(--blue);
+}
+
+span.cm-hmd-frontmatter.cm-meta {
+  color: var(--comment);
+}

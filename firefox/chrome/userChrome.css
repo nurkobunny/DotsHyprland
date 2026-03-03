@@ -1,0 +1,232 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+:root {
+  --rm-bg0: #faf4ed;
+  --rm-bg0-hard: #fffaf3;
+  --rm-bg0-soft: #f2e9e1;
+  --rm-bg1: #f2e9e1;
+  --rm-bg2: #dfdad9;
+  --rm-bg3: #cecacd;
+  --rm-bg4: #9893a5;
+  
+  --rm-fg0: #575279;
+  --rm-fg1: #575279;
+  --rm-fg2: #797593;
+  --rm-fg3: #9893a5;
+  --rm-fg4: #b4b0c2;
+  
+  --rm-red: #b4637a;
+  --rm-green: #286983;
+  --rm-yellow: #ea9d34;
+  --rm-blue: #56949f;
+  --rm-purple: #907aa9;
+  --rm-rose: #d7827e;
+  --rm-gold: #ea9d34;
+  --rm-grey: #9893a5;
+  
+  --rm-bg-statusline1: var(--rm-bg0);
+  --rm-bg-statusline2: var(--rm-bg1);
+  --rm-bg-statusline3: var(--rm-bg2);
+
+  --toolbarbutton-icon-fill: #575279 !important;
+  --toolbarbutton-icon-fill-attention: #d7827e !important;
+  --panel-description-color: #575279 !important;
+  --lwt-toolbarbutton-icon-fill: #575279 !important;
+}
+
+* {
+  font-family: "JetBrains Mono", monospace !important;
+}
+
+#main-window {
+  background-color: #faf4ed !important;
+  color: #575279 !important;
+}
+
+.toolbarbutton-1, 
+.toolbarbutton-icon,
+.navigation-stack,
+#nav-bar .toolbarbutton-1,
+#nav-bar image,
+#nav-bar stack,
+.urlbar-icon,
+#identity-box,
+#PanelUI-menu-button,
+#unified-extensions-button,
+.bookmark-item,
+.toolbarbutton-text {
+  fill: #575279 !important;
+  color: #575279 !important;
+}
+
+#star-button, #reader-mode-button, #identity-icon, .sharing-icon {
+  fill: #575279 !important;
+}
+
+@-moz-document url("about:home"), url("about:newtab") {
+  body {
+    background-color: #faf4ed !important;
+    color: #575279 !important;
+  }
+  .search-wrapper, .top-sites, .section {
+    background-color: #faf4ed !important;
+    color: #575279 !important;
+  }
+  a {
+    color: #56949f !important;
+  }
+}
+
+#nav-bar {
+  background-color: #faf4ed !important;
+  color: #575279 !important;
+}
+
+#urlbar-input, 
+#urlbar-scheme,
+.urlbar-input-box,
+#urlbar-input-container,
+#urlbar {
+  background-color: #f2e9e1 !important;
+  color: #575279 !important;
+}
+
+.urlbar-input-box > input {
+  color: #575279 !important;
+}
+
+.urlbarView-row,
+.urlbarView-row * {
+  color: #575279 !important;
+  fill: #575279 !important;
+}
+
+.urlbarView-row:hover {
+  background-color: #f2e9e1 !important;
+}
+
+.urlbarView-title,
+.urlbarView-secondary,
+.urlbarView-url {
+  color: #575279 !important;
+}
+
+.tab-background {
+  background-color: #faf4ed !important;
+  margin: 2px !important;
+}
+
+.tab-background[selected="true"] {
+  background-color: #f2e9e1 !important;
+}
+
+.tab-label {
+  color: #575279 !important;
+}
+
+.tab-secondary-label {
+  color: var(--rm-fg4) !important;
+}
+
+.tab-icon-image {
+  filter: brightness(0.7) contrast(1.2) !important;
+}
+
+#TabsToolbar {
+  background-color: #faf4ed !important;
+}
+
+#PersonalToolbar {
+  background-color: #faf4ed !important;
+  color: #575279 !important;
+}
+
+#PersonalToolbar .bookmark-item .toolbarbutton-text {
+  color: #575279 !important;
+}
+
+#sidebar-box {
+  background-color: #faf4ed !important;
+  color: #575279 !important;
+}
+
+.sidebar-placesTree {
+  background-color: #faf4ed !important;
+  color: #575279 !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row {
+  background-color: #faf4ed !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell-text {
+  color: #575279 !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row(selected) {
+  background-color: #f2e9e1 !important;
+}
+
+#toolbar-menubar {
+  background-color: #faf4ed !important;
+  color: #575279 !important;
+}
+
+menupopup {
+  background-color: #faf4ed !important;
+  color: #575279 !important;
+}
+
+menuitem:hover {
+  background-color: #f2e9e1 !important;
+}
+
+button {
+  background-color: #f2e9e1 !important;
+  color: #575279 !important;
+}
+
+toolbar {
+  background-color: #faf4ed !important;
+}
+
+.searchbar-textbox {
+  background-color: #f2e9e1 !important;
+  color: #575279 !important;
+}
+
+scrollbar {
+  background-color: #faf4ed !important;
+}
+
+scrollbarthumb {
+  background-color: #dfdad9 !important;
+}
+
+#statuspanel {
+  background-color: #faf4ed !important;
+  color: #575279 !important;
+}
+
+findbar {
+  background-color: #faf4ed !important;
+}
+
+input {
+  background-color: #f2e9e1 !important;
+  color: #575279 !important;
+}
+
+.panel-arrowcontent {
+  background-color: #faf4ed !important;
+  color: #575279 !important;
+}
+
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--rm-bg2) #faf4ed !important;
+}
+
+#navigator-toolbox {
+  border-bottom: none !important;
+}

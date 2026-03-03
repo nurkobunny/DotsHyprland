@@ -1,0 +1,216 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+:root {
+  --rm-bg0: #282639;
+  --rm-bg0-hard: #1f1d2e;
+  --rm-bg0-soft: #2a273f;
+  --rm-bg1: #393552;
+  --rm-bg2: #44415a;
+  --rm-bg3: #56526e;
+  --rm-bg4: #6e6a86;
+  
+  --rm-fg0: #e0def4;
+  --rm-fg1: #e0def4;
+  --rm-fg2: #908e9c;
+  --rm-fg3: #817c9c;
+  --rm-fg4: #56526e;
+  
+  --rm-red: #eb6f92;
+  --rm-green: #3e8fb0;
+  --rm-yellow: #f6c177;
+  --rm-blue: #9ccfd8;
+  --rm-purple: #c4a7e7;
+  --rm-rose: #ea9a97;
+  --rm-gold: #f6c177;
+  --rm-grey: #6e6a86;
+  
+  --rm-bg-statusline1: var(--rm-bg0);
+  --rm-bg-statusline2: var(--rm-bg1);
+  --rm-bg-statusline3: var(--rm-bg2);
+}
+
+* {
+  font-family: "JetBrains Mono", monospace !important;
+}
+
+#main-window {
+  background-color: #282639 !important;
+  color: var(--rm-fg1) !important;
+}
+
+@-moz-document url("about:home"), url("about:newtab") {
+  body {
+    background-color: #282639 !important;
+    color: #e0def4 !important;
+  }
+
+  .search-wrapper, .top-sites, .section {
+    background-color: #282639 !important;
+    color: #e0def4 !important;
+  }
+
+  a {
+    color: #9ccfd8 !important;
+  }
+}
+
+#nav-bar {
+  background-color: #282639 !important;
+}
+
+#urlbar {
+  background-color: #2a273f !important;
+  color: var(--rm-fg1) !important;
+}
+
+#urlbar:hover {
+  background-color: #2a273f !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+  background-color: #282639 !important;
+}
+
+.urlbarView {
+  background-color: #282639 !important;
+}
+
+.urlbarView-row {
+  color: var(--rm-fg1) !important;
+}
+
+.urlbarView-row:hover {
+  background-color: #393552 !important;
+}
+
+.tab-background {
+  background-color: #282639 !important;
+  margin: 2px !important;
+}
+
+.tab-background[selected="true"] {
+  background-color: #2a273f !important;
+}
+
+.tab-label {
+  color: var(--rm-fg1) !important;
+}
+
+.tab-secondary-label {
+  color: var(--rm-fg4) !important;
+}
+
+.tab-icon-image {
+  filter: brightness(1.2) !important;
+}
+
+#TabsToolbar {
+  background-color: #282639 !important;
+}
+
+#PersonalToolbar {
+  background-color: #282639 !important;
+}
+
+#sidebar-box {
+  background-color: #282639 !important;
+  color: var(--rm-fg1) !important;
+}
+
+.sidebar-placesTree {
+  background-color: #282639 !important;
+  color: var(--rm-fg1) !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row {
+  background-color: #282639 !important;
+  color: var(--rm-fg1) !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row(selected) {
+  background-color: #393552 !important;
+  color: var(--rm-fg0) !important;
+}
+
+#toolbar-menubar {
+  background-color: #282639 !important;
+  color: var(--rm-fg1) !important;
+}
+
+menupopup {
+  background-color: #282639 !important;
+  color: var(--rm-fg1) !important;
+}
+
+menuitem:hover {
+  background-color: #393552 !important;
+  color: var(--rm-fg0) !important;
+}
+
+button {
+  background-color: #393552 !important;
+  color: var(--rm-fg1) !important;
+}
+
+button:hover {
+  background-color: var(--rm-bg2) !important;
+  color: var(--rm-fg0) !important;
+}
+
+toolbar {
+  background-color: #282639 !important;
+}
+
+.searchbar-textbox {
+  background-color: #2a273f !important;
+  color: var(--rm-fg1) !important;
+}
+
+scrollbar {
+  background-color: #282639 !important;
+}
+
+scrollbarthumb {
+  background-color: #44415a !important;
+}
+
+scrollbarthumb:hover {
+  background-color: #56526e !important;
+}
+
+#statuspanel {
+  background-color: #282639 !important;
+  color: var(--rm-fg1) !important;
+}
+
+findbar {
+  background-color: #282639 !important;
+}
+
+#downloadsPanel {
+  background-color: #282639 !important;
+}
+
+input {
+  background-color: #2a273f !important;
+  color: var(--rm-fg1) !important;
+}
+
+.panel-arrowcontent {
+  background-color: #282639 !important;
+  color: var(--rm-fg1) !important;
+}
+
+.notification {
+  background-color: #393552 !important;
+  color: var(--rm-fg1) !important;
+}
+
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--rm-bg2) #282639 !important;
+}
+
+#navigator-toolbox {
+  border-bottom: none !important;
+}

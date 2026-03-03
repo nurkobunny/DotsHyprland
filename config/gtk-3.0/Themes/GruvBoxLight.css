@@ -1,0 +1,36 @@
+messagedialog {
+    background-color: #f2e5bc;
+    color: #3c3836;
+}
+
+messagedialog .titlebar {
+    background-color: #ebdbb2;
+    color: #3c3836;
+}
+
+messagedialog button {
+    background-color: #d5c4a1;
+    color: #3c3836;
+}
+
+messagedialog button:hover {
+    background-color: #bdae93;
+}
+
+infobar {
+    background-color: #ebdbb2;
+    color: #3c3836;
+}
+
+messagedialog .content-area,
+messagedialog box,
+messagedialog label {
+    background-color: #f2e5bc !important;
+    color: #3c3836 !important;
+}
+
+window.dialog.message,
+window.dialog.confirmation {
+    background-color: #f2e5bc !important;
+    color: #3c3836 !important;
+}

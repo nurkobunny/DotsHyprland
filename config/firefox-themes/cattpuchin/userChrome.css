@@ -1,0 +1,399 @@
+/* =============================================================================
+ * Catppuccin Macchiato Theme for Firefox
+ * Color palette: https://github.com/catppuccin/catppuccin
+ * ============================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Catppuccin Macchiato Color Palette */
+:root {
+  /* Base colors */
+  --ctp-base: #24273a;
+  --ctp-mantle: #1e2030;
+  --ctp-crust: #181926;
+  
+  /* Text colors */
+  --ctp-text: #cad3f5;
+  --ctp-subtext0: #a5adcb;
+  --ctp-subtext1: #b8c0e0;
+  
+  /* Surface colors */
+  --ctp-surface0: #363a4f;
+  --ctp-surface1: #494d64;
+  --ctp-surface2: #5b6078;
+  
+  /* Overlay colors */
+  --ctp-overlay0: #6e738d;
+  --ctp-overlay1: #8087a2;
+  --ctp-overlay2: #939ab7;
+  
+  /* Accent colors */
+  --ctp-blue: #8aadf4;
+  --ctp-lavender: #b7bdf8;
+  --ctp-sapphire: #7dc4e4;
+  --ctp-sky: #91d7e3;
+  --ctp-teal: #8bd5ca;
+  --ctp-green: #a6da95;
+  --ctp-yellow: #eed49f;
+  --ctp-peach: #f5a97f;
+  --ctp-maroon: #ee99a0;
+  --ctp-red: #ed8796;
+  --ctp-mauve: #c6a0f6;
+  --ctp-pink: #f5bde6;
+  --ctp-flamingo: #f0c6c6;
+  --ctp-rosewater: #f4dbd6;
+  
+  /* UI colors */
+  --ctp-bg-statusline1: var(--ctp-mantle);
+  --ctp-bg-statusline2: var(--ctp-surface0);
+  --ctp-bg-statusline3: var(--ctp-surface1);
+}
+
+/* Global styles */
+* {
+  font-family: "Fira Code", "JetBrains Mono", "Cascadia Code", monospace !important;
+}
+
+/* Main window background */
+#main-window {
+  background-color: #24273a !important;
+  color: var(--ctp-text) !important;
+}
+
+/* Navigation toolbar */
+#nav-bar {
+  background-color: #24273a !important;
+  border-bottom: 1px solid var(--ctp-surface1) !important;
+}
+
+/* URL bar */
+#urlbar {
+  background-color: #24273a !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  color: var(--ctp-text) !important;
+}
+
+#urlbar:hover {
+  background-color: var(--ctp-surface1) !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+  background-color: var(--ctp-surface0) !important;
+}
+
+.urlbarView {
+  background-color: var(--ctp-surface0) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+}
+
+.urlbarView-row {
+  color: var(--ctp-text) !important;
+}
+
+.urlbarView-row:hover {
+  background-color: var(--ctp-surface1) !important;
+}
+
+/* Tabs */
+.tab-background {
+  background-color: #24273a !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  margin: 2px !important;
+}
+
+.tab-background[selected="true"] {
+  background-color: var(--ctp-bg-statusline2) !important;
+  border-bottom: 2px solid var(--ctp-sapphire) !important;
+}
+
+.tab-label {
+  color: var(--ctp-text) !important;
+}
+
+.tab-secondary-label {
+  color: var(--ctp-subtext0) !important;
+}
+
+.tab-icon-image {
+  filter: brightness(0.8) !important;
+}
+
+/* Tab bar */
+#TabsToolbar {
+  background-color: #24273a !important;
+  border-bottom: 1px solid var(--ctp-surface1) !important;
+}
+
+/* Bookmarks toolbar */
+#PersonalToolbar {
+  background-color: #24273a !important;
+  border-bottom: 1px solid var(--ctp-surface1) !important;
+}
+
+/* Sidebar */
+#sidebar-box {
+  background-color: #24273a !important;
+  color: var(--ctp-text) !important;
+}
+
+.sidebar-placesTree {
+  background-color: var(--ctp-base) !important;
+  color: var(--ctp-text) !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row {
+  background-color: var(--ctp-base) !important;
+  color: var(--ctp-text) !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row(selected) {
+  background-color: var(--ctp-surface1) !important;
+  color: var(--ctp-text) !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row(hover) {
+  background-color: var(--ctp-surface0) !important;
+}
+
+/* Menu bar */
+#toolbar-menubar {
+  background-color: #24273a !important;
+  color: var(--ctp-text) !important;
+}
+
+menupopup {
+  background-color: #24273a !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  color: var(--ctp-text) !important;
+}
+
+menuitem {
+  color: var(--ctp-text) !important;
+}
+
+menuitem:hover {
+  background-color: var(--ctp-surface1) !important;
+  color: var(--ctp-text) !important;
+}
+
+/* Buttons */
+button {
+  background-color: #24273a !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  color: var(--ctp-text) !important;
+}
+
+button:hover {
+  background-color: var(--ctp-surface1) !important;
+  color: var(--ctp-text) !important;
+}
+
+button:active {
+  background-color: var(--ctp-surface2) !important;
+}
+
+/* Toolbars */
+toolbar {
+  background-color: #24273a !important;
+  border-bottom: 1px solid var(--ctp-surface1) !important;
+}
+
+/* Search bar */
+.searchbar-textbox {
+  background-color: #24273a !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  color: var(--ctp-text) !important;
+}
+
+/* Scrollbars */
+scrollbar {
+  background-color: #24273a !important;
+}
+
+scrollbarbutton {
+  background-color: #24273a !important;
+}
+
+scrollbarthumb {
+  background-color: var(--ctp-surface1) !important;
+  border: 1px solid var(--ctp-surface2) !important;
+}
+
+scrollbarthumb:hover {
+  background-color: var(--ctp-surface2) !important;
+}
+
+/* Progress meter */
+.progress-bar {
+  background-color: var(--ctp-sapphire) !important;
+}
+
+/* Status panel */
+#statuspanel {
+  background-color: var(--ctp-surface0) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  color: var(--ctp-text) !important;
+}
+
+/* Find bar */
+findbar {
+  background-color: #24273a !important;
+  border-top: 1px solid var(--ctp-surface1) !important;
+}
+
+/* Downloads panel */
+#downloadsPanel {
+  background-color: #24273a !important;
+  border: 1px solid var(--ctp-surface1) !important;
+}
+
+/* Context menu */
+.context-menu {
+  background-color: var(--ctp-surface0) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  color: var(--ctp-text) !important;
+}
+
+.context-menu:hover {
+  background-color: var(--ctp-surface1) !important;
+}
+
+/* Input fields */
+input {
+  background-color: var(--ctp-surface0) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  color: var(--ctp-text) !important;
+}
+
+input:hover {
+  background-color: var(--ctp-surface1) !important;
+}
+
+input:focus {
+  border-color: var(--ctp-sapphire) !important;
+}
+
+/* Checkboxes and radio buttons */
+checkbox {
+  background-color: var(--ctp-surface0) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+}
+
+checkbox:hover {
+  background-color: var(--ctp-surface1) !important;
+}
+
+checkbox[checked="true"] {
+  background-color: var(--ctp-sapphire) !important;
+}
+
+/* Dropdown menus */
+menulist {
+  background-color: #24273a !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  color: var(--ctp-text) !important;
+}
+
+menulist:hover {
+  background-color: var(--ctp-surface1) !important;
+}
+
+/* Panel UI */
+.panel-arrowcontent {
+  background-color: var(--ctp-surface0) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  color: var(--ctp-text) !important;
+}
+
+/* Notification */
+.notification {
+  background-color: var(--ctp-surface0) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  color: var(--ctp-text) !important;
+}
+
+/* Error states */
+.error {
+  color: var(--ctp-red) !important;
+}
+
+.warning {
+  color: var(--ctp-peach) !important;
+}
+
+.success {
+  color: var(--ctp-green) !important;
+}
+
+/* Link colors */
+a {
+  color: var(--ctp-blue) !important;
+}
+
+a:hover {
+  color: var(--ctp-sky) !important;
+}
+
+a:visited {
+  color: var(--ctp-mauve) !important;
+}
+
+/* =============================================================================
+ * Tab colors based on Catppuccin Macchiato
+ * ============================================================================= */
+
+/* Normal mode tabs */
+.tabbrowser-tab:not([selected="true"]) .tab-background {
+  background-color: var(--ctp-bg-statusline3) !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-background {
+  background-color: var(--ctp-bg-statusline2) !important;
+}
+
+/* Hover effects */
+.tabbrowser-tab:hover:not([selected="true"]) .tab-background {
+  background-color: var(--ctp-surface1) !important;
+}
+
+/* Pinned tabs */
+.tabbrowser-tab[pinned] .tab-background {
+  background-color: var(--ctp-surface0) !important;
+}
+
+/* Audio playing tabs */
+.tabbrowser-tab[soundplaying] .tab-label {
+  color: var(--ctp-sapphire) !important;
+}
+
+.tabbrowser-tab[muted] .tab-label {
+  color: var(--ctp-overlay0) !important;
+}
+
+/* =============================================================================
+ * Custom scrollbar for web content
+ * ============================================================================= */
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--ctp-surface1) var(--ctp-base) !important;
+}
+
+/* =============================================================================
+ * Animation for smooth transitions
+ * ============================================================================= */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
+}
+
+/* =============================================================================
+ * Responsive design adjustments
+ * ============================================================================= */
+@media (max-width: 700px) {
+  .tab-label {
+    font-size: 11px !important;
+  }
+  
+  #urlbar {
+    font-size: 12px !important;
+  }
+}

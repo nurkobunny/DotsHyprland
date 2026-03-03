@@ -1,0 +1,49 @@
+{
+	"name": "dracula-purple",
+	"displayName": "Dracula Purple",
+	"description": "Extending dracula with purple colors",
+	"version": "1.5.3",
+	"publisher": "cbasdev",
+	"keywords": [
+		"theme",
+		"cbasdev",
+		"dracula",
+		"purple"
+	],
+	"engines": {
+		"vscode": "^1.67.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"icon": "img/dracula.ico",
+	"author": {
+		"name": "Sebastian Velez Montoya",
+		"email": "info.cbasdev@gmail.com",
+		"url": "https://github.com/cbasdev"
+	},
+	"repository": {
+		"url": "https://github.com/cbasdev/dracula-purple-theme.git",
+		"type": "git"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "Dracula Purple",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Dracula Purple-color-theme.json"
+			}
+		]
+	},
+	"scripts": {
+		"compile": "node src/index.js",
+		"package": "npm run compile && vsce package",
+		"publish": "vsce publish"
+	},
+	"type": "module",
+	"__metadata": {
+		"installedTimestamp": 1765869578819,
+		"targetPlatform": "universal",
+		"size": 173393
+	}
+}

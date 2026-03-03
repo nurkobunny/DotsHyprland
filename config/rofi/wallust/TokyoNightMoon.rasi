@@ -1,0 +1,12 @@
+* {
+  background:       #1E2030CC;
+  foreground:       #C8D3F5FF;
+  accent:           #7DC4E469;
+  background-tb:    #2B2D3AFF;
+  border-tb:        #444A73FF;
+  selected:         linear-gradient(to right, #444A73FF, #7DC4E469);
+  button:           linear-gradient(#82AaffFF);
+  button-selected:  linear-gradient(#7DC4E469);
+  active:           linear-gradient(to right, #86E1FCFF, #B4F9F8FF);
+  urgent:           #F7768EFF;
+}

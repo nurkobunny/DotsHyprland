@@ -1,0 +1,412 @@
+/* =============================================================================
+ * Nord Theme for Firefox (adapted from Gruvbox Material)
+ * ============================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Nord Color Palette */
+:root {
+  /* Dark background colors */
+  --nord-bg0: #2e3440;
+  --nord-bg1: #3b4252;
+  --nord-bg2: #434c5e;
+  --nord-bg3: #4c566a;
+
+  /* Foreground colors */
+  --nord-fg0: #d8dee9;
+  --nord-fg1: #e5e9f0;
+  --nord-fg2: #eceff4;
+
+  /* Accent colors */
+  --nord-red: #bf616a;
+  --nord-orange: #d08770;
+  --nord-yellow: #ebcb8b;
+  --nord-green: #a3be8c;
+  --nord-blue: #81a1c1;
+  --nord-purple: #b48ead;
+  --nord-aqua: #88c0d0;
+  --nord-grey: #616e88;
+
+  /* UI colors */
+  --nord-statusline1: var(--nord-bg0);
+  --nord-statusline2: var(--nord-bg1);
+  --nord-statusline3: var(--nord-bg2);
+}
+
+/* Replace Gruvbox variables with Nord equivalents */
+:root {
+  --gb-bg0: var(--nord-bg0);
+  --gb-bg1: var(--nord-bg1);
+  --gb-bg2: var(--nord-bg2);
+  --gb-bg3: var(--nord-bg3);
+  --gb-bg4: var(--nord-grey);
+
+  --gb-fg0: var(--nord-fg2);
+  --gb-fg1: var(--nord-fg1);
+  --gb-fg2: var(--nord-fg0);
+  --gb-fg3: var(--nord-grey);
+  --gb-fg4: var(--nord-grey);
+
+  --gb-red: var(--nord-red);
+  --gb-green: var(--nord-green);
+  --gb-yellow: var(--nord-yellow);
+  --gb-blue: var(--nord-blue);
+  --gb-purple: var(--nord-purple);
+  --gb-aqua: var(--nord-aqua);
+  --gb-orange: var(--nord-orange);
+  --gb-grey: var(--nord-grey);
+
+  --gb-bg-statusline1: var(--nord-statusline1);
+  --gb-bg-statusline2: var(--nord-statusline2);
+  --gb-bg-statusline3: var(--nord-statusline3);
+}
+
+
+/* Global styles */
+* {
+  font-family: "Fira Code", "JetBrains Mono", "Cascadia Code", monospace !important;
+}
+
+/* Main window background */
+#main-window {
+  background-color: #2e3440 !important;
+  color: var(--gb-fg1) !important;
+}
+
+/* Navigation toolbar */
+#nav-bar {
+  background-color: #2e3440 !important;
+  border-bottom: 1px solid var(--gb-bg2) !important;
+}
+
+/* URL bar */
+#urlbar {
+  background-color: #2e3440 !important;
+  border: 1px solid var(--gb-bg2) !important;
+  color: var(--gb-fg1) !important;
+}
+
+#urlbar:hover {
+  background-color: var(--gb-bg2) !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+  background-color: var(--gb-bg1) !important;
+}
+
+.urlbarView {
+  background-color: var(--gb-bg1) !important;
+  border: 1px solid var(--gb-bg2) !important;
+}
+
+.urlbarView-row {
+  color: var(--gb-fg1) !important;
+}
+
+.urlbarView-row:hover {
+  background-color: var(--gb-bg2) !important;
+}
+
+/* Tabs */
+.tab-background {
+  background-color: #2e3440 !important;
+  border: 1px solid var(--gb-bg2) !important;
+  margin: 2px !important;
+}
+
+.tab-background[selected="true"] {
+  background-color: var(--gb-bg-statusline2) !important;
+  border-bottom: 2px solid var(--gb-blue) !important;
+}
+
+.tab-label {
+  color: var(--gb-fg1) !important;
+}
+
+.tab-secondary-label {
+  color: var(--gb-fg4) !important;
+}
+
+.tab-icon-image {
+  filter: brightness(0.8) !important;
+}
+
+/* Tab bar */
+#TabsToolbar {
+  background-color: #2e3440 !important;
+  border-bottom: 1px solid var(--gb-bg2) !important;
+}
+
+/* Bookmarks toolbar */
+#PersonalToolbar {
+  background-color: var(--gb-bg1) !important;
+  border-bottom: 1px solid var(--gb-bg2) !important;
+}
+
+/* Sidebar */
+#sidebar-box {
+  background-color: #2e3440 !important;
+  color: var(--gb-fg1) !important;
+}
+
+.sidebar-placesTree {
+  background-color: #2e3440 !important;
+  color: var(--gb-fg1) !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row {
+  background-color: #2e3440 !important;
+  color: var(--gb-fg1) !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row(selected) {
+  background-color: var(--gb-bg2) !important;
+  color: var(--gb-fg0) !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row(hover) {
+  background-color: var(--gb-bg1) !important;
+}
+
+/* Menu bar */
+#toolbar-menubar {
+  background-color: #2e3440 !important;
+  color: var(--gb-fg1) !important;
+}
+
+menupopup {
+  background-color: #2e3440 !important;
+  border: 1px solid var(--gb-bg2) !important;
+  color: var(--gb-fg1) !important;
+}
+
+menuitem {
+  color: var(--gb-fg1) !important;
+}
+
+menuitem:hover {
+  background-color: var(--gb-bg2) !important;
+  color: var(--gb-fg0) !important;
+}
+
+/* Buttons */
+button {
+  background-color: #2e3440 !important;
+  border: 1px solid var(--gb-bg2) !important;
+  color: var(--gb-fg1) !important;
+}
+
+button:hover {
+  background-color: var(--gb-bg2) !important;
+  color: var(--gb-fg0) !important;
+}
+
+button:active {
+  background-color: var(--gb-bg3) !important;
+}
+
+/* Toolbars */
+toolbar {
+  background-color: #2e3440 !important;
+  border-bottom: 1px solid var(--gb-bg2) !important;
+}
+
+/* Search bar */
+.searchbar-textbox {
+  background-color: #2e3440 !important;
+  border: 1px solid var(--gb-bg2) !important;
+  color: var(--gb-fg1) !important;
+}
+
+/* Scrollbars */
+scrollbar {
+  background-color: #2e3440 !important;
+}
+
+scrollbarbutton {
+  background-color: #2e3440 !important;
+}
+
+scrollbarthumb {
+  background-color: var(--gb-bg2) !important;
+  border: 1px solid var(--gb-bg3) !important;
+}
+
+scrollbarthumb:hover {
+  background-color: var(--gb-bg3) !important;
+}
+
+/* Progress meter */
+.progress-bar {
+  background-color: var(--gb-blue) !important;
+}
+
+/* Status panel */
+#statuspanel {
+  background-color: var(--gb-bg1) !important;
+  border: 1px solid var(--gb-bg2) !important;
+  color: var(--gb-fg1) !important;
+}
+
+/* Find bar */
+findbar {
+  background-color: #2e3440 !important;
+  border-top: 1px solid var(--gb-bg2) !important;
+}
+
+/* Downloads panel */
+#downloadsPanel {
+  background-color: #2e3440 !important;
+  border: 1px solid var(--gb-bg2) !important;
+}
+
+/* Context menu */
+.context-menu {
+  background-color: var(--gb-bg1) !important;
+  border: 1px solid var(--gb-bg2) !important;
+  color: var(--gb-fg1) !important;
+}
+
+.context-menu:hover {
+  background-color: var(--gb-bg2) !important;
+}
+
+/* Input fields */
+input {
+  background-color: var(--gb-bg1) !important;
+  border: 1px solid var(--gb-bg2) !important;
+  color: var(--gb-fg1) !important;
+}
+
+input:hover {
+  background-color: var(--gb-bg2) !important;
+}
+
+input:focus {
+  border-color: var(--gb-blue) !important;
+}
+
+/* Checkboxes and radio buttons */
+checkbox {
+  background-color: var(--gb-bg1) !important;
+  border: 1px solid var(--gb-bg2) !important;
+}
+
+checkbox:hover {
+  background-color: var(--gb-bg2) !important;
+}
+
+checkbox[checked="true"] {
+  background-color: var(--gb-blue) !important;
+}
+
+/* Dropdown menus */
+menulist {
+  background-color: var(--gb-bg1) !important;
+  border: 1px solid var(--gb-bg2) !important;
+  color: var(--gb-fg1) !important;
+}
+
+menulist:hover {
+  background-color: var(--gb-bg2) !important;
+}
+
+/* Panel UI */
+.panel-arrowcontent {
+  background-color: var(--gb-bg1) !important;
+  border: 1px solid var(--gb-bg2) !important;
+  color: var(--gb-fg1) !important;
+}
+
+/* Notification */
+.notification {
+  background-color: var(--gb-bg1) !important;
+  border: 1px solid var(--gb-bg2) !important;
+  color: var(--gb-fg1) !important;
+}
+
+/* Error states */
+.error {
+  color: var(--gb-red) !important;
+}
+
+.warning {
+  color: var(--gb-orange) !important;
+}
+
+.success {
+  color: var(--gb-green) !important;
+}
+
+/* Link colors */
+a {
+  color: var(--gb-blue) !important;
+}
+
+a:hover {
+  color: var(--gb-aqua) !important;
+}
+
+a:visited {
+  color: var(--gb-purple) !important;
+}
+
+/* =============================================================================
+ * Tab colors based on Gruvbox Material statusline styles
+ * ============================================================================= */
+
+/* Normal mode tabs */
+.tabbrowser-tab:not([selected="true"]) .tab-background {
+  background-color: var(--gb-bg-statusline3) !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-background {
+  background-color: var(--gb-bg-statusline2) !important;
+}
+
+/* Hover effects */
+.tabbrowser-tab:hover:not([selected="true"]) .tab-background {
+  background-color: var(--gb-bg2) !important;
+}
+
+/* Pinned tabs */
+.tabbrowser-tab[pinned] .tab-background {
+  background-color: var(--gb-bg1) !important;
+}
+
+/* Audio playing tabs */
+.tabbrowser-tab[soundplaying] .tab-label {
+  color: var(--gb-blue) !important;
+}
+
+.tabbrowser-tab[muted] .tab-label {
+  color: var(--gb-grey) !important;
+}
+
+/* =============================================================================
+ * Custom scrollbar for web content
+ * ============================================================================= */
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--gb-bg2) var(--gb-bg0) !important;
+}
+
+/* =============================================================================
+ * Animation for smooth transitions
+ * ============================================================================= */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
+}
+
+/* =============================================================================
+ * Responsive design adjustments
+ * ============================================================================= */
+@media (max-width: 700px) {
+  .tab-label {
+    font-size: 11px !important;
+  }
+  
+  #urlbar {
+    font-size: 12px !important;
+  }
+}

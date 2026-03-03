@@ -1,0 +1,5 @@
+# .gitignore
+**/Backups/
+**/Cache/
+**/CachedData/
+*.log
